@@ -300,7 +300,7 @@ mod tests {
     fn t_get_padding() {
         let builder = Builder::default();
         let codec = builder.create("abcd");
-        println!("");
+        println!();
         for _ in 0..8 {
             let padding = codec.get_padding();
             assert_eq!(padding[0] as usize, padding.len());
@@ -312,7 +312,7 @@ mod tests {
     fn t_sequence() {
         let nonce_len = 12_usize;
         let mut seq = Sequence::new(nonce_len);
-        println!("");
+        println!();
         for i in 1..11 {
             seq.advance().unwrap();
             println!("{:?}", seq.0);

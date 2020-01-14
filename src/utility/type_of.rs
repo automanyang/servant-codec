@@ -2,5 +2,5 @@
 
 #[allow(unused)]
 pub fn type_of<T>(_: &T) -> String {
-    format!("{}", std::any::type_name::<T>())
+    std::any::type_name::<T>().to_string()
 }
